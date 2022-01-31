@@ -1,9 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Threading.Tasks;
 
 namespace Module4HW6
 {
     public interface IDataInitialize
     {
-        public void Initialize(ModelBuilder modelBuilder);
+        public Task Initialize(ApplicationContext modelBuilder);
     }
 }

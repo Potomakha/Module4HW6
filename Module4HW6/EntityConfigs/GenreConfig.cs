@@ -8,7 +8,7 @@ namespace Module4HW6.EntityConfigs
     {
         public void Configure(EntityTypeBuilder<Genre> builder)
         {
-            builder.HasKey(g => g.GenreId);
+            builder.ToTable("Genre").HasKey(g => g.GenreId);
             builder.Property(g => g.GenreId).ValueGeneratedOnAdd();
             builder.Property(g => g.Title).IsRequired();
         }

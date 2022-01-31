@@ -8,7 +8,7 @@ namespace Module4HW6.EntityConfigs
     {
         public void Configure(EntityTypeBuilder<Artist> builder)
         {
-            builder.HasKey(a => a.ArtistId);
+            builder.ToTable("Artist").HasKey(a => a.ArtistId);
             builder.Property(a => a.ArtistId).ValueGeneratedOnAdd();
             builder.Property(a => a.Name).IsRequired();
             builder.Property(a => a.DateOdBirth).IsRequired();
